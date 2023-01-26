@@ -7,6 +7,7 @@ import bombon from '../assets/on.png'
 import {ono} from '../store/slices/on.slice'
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import bombof from '../assets/off.png'
 
 
 const Config = () => {
@@ -38,7 +39,7 @@ const Config = () => {
                 </div>
                 
                <h2>On/Off</h2>
-               <button onClick={()=>dispatch(ono())} className='encender'><img className='bombon' src={bombon} alt="" /></button>
+               <button onClick={()=>dispatch(ono())} className='encender'><img className='bombon' src={on ? bombon :bombof} alt="" /></button>
 
           <h1 className={on ? 'perPage' : 'perPageDark'}>Change Pokemon's Quantities per Page?</h1>
           <select className='selectConfig' onChange={ver} name="" id="">

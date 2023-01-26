@@ -5,13 +5,13 @@ import { useState } from 'react';
 import axios from 'axios'
 import '../App.css'
 import { useNavigate } from 'react-router-dom';
-
+import { useSelector } from 'react-redux';
 
 
 const PokemonCard = ({ url }) => {
 
 
-
+    const on = useSelector(state=> state.on)
     const [pokemon, setPokemon] = useState({})
     const navigate = useNavigate()
     const [color, setColor] = useState('')
