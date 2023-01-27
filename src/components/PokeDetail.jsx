@@ -29,13 +29,13 @@ console.log(uniquePoke)
         navigate('/Pokedex')
     }
     return (
-        <html className={on ? 'html' : "htmlDark"}>
+    
     <body className={on ? 'body1' : "bodyDark1"}>
         
        
-        <div className='pullBody'>
+        <div className= {on ? 'pullBody1' : 'pullBodyDark1' }>
             <header className='headRec'>
-                <img className='imgPokedexD' src={pokedex} alt="" />
+                <img className={on ? 'imgPokedexD' : 'imgPokedexDDark'} src={pokedex} alt="" />
                 <div className={on ? "rectangleCardD" : "rectangleCardDDark"}></div>
                 <div className='rectangleCard1D'></div>
                 <div className='elipsesCardD'>
@@ -48,21 +48,23 @@ console.log(uniquePoke)
 
             <nav className=   {on ? "nav" : "navDark"}>
                 
-                <nav className= {on ? "totalDetail" : "totalDetailDark"}>
+               
+
+                    <article className={on ?"containerDetail" :"containerDetailDark"}>
                     <div className={on ? 'imgContainer' :'imgContainerDark' }><img className='imgHead' src={uniquePoke.sprites?.front_shiny} alt="" /></div>
 
-                    <div className='containerDetail'>
                         <div className='headhead'>           {on ? "" : ""}   
                                         <div className='idPoke'>#{uniquePoke.id}</div>
                                                  <div className='allName'><div className='line1'></div> <div className= {on ? "namePoke" : "namePokeDark"} >{uniquePoke.name}</div><div className='line2'></div></div>
                             <div className='adicionalAll'>  <div className='peso'><h2 className='t'>weight</h2><div className= {on ? "wDate" : "wDateDark"}>{uniquePoke.weight}</div> </div>   <div className='tall'><h2 className='t'></h2>height <div className='wDate'>{uniquePoke.weight}</div></div>     </div>
                         </div>
-                        <nav className='dateTwo'>
+                       
                             <div className='right_left'>
                                 <div className='rl'>  <div className={on ? "tskill" : "tskillDark"} >Types</div> <div className='tsk12'>  <div className='t1'>{uniquePoke.types?.[0]?.type.name}</div> <div className='t2'>{uniquePoke.types?.[1]?.type.name}</div>                   </div></div>
 
                                 <div className='rl'>  <div className={on ? "tskill" : "tskillDark"} >Abilities </div> <div className='tsk12'>  <div className= {on ? "sk1" : "sk1Dark"}>{uniquePoke?.abilities?.[0]?.ability.name}</div> <div className='sk2'>{uniquePoke?.abilities?.[1]?.ability.name}</div>         </div></div></div>
-
+                                </article>
+                                <div className='dividedLine2'></div>
                             <article className={on ? "article" : "articleDark"}>
                                 <div className='lineOne' ><h1 className='statsName'>Stats</h1><div className='statLine'></div><img className='pokeIm' src={pn} alt="" /></div>
 
@@ -104,14 +106,6 @@ console.log(uniquePoke)
 
                             </article>
 
-
-                        </nav>
-
-
-                    </div>
-                    
-                        
-
                     
                     <div className='dividedLine2'></div>
                     
@@ -138,11 +132,11 @@ console.log(uniquePoke)
 
                     </article>
                   
-                </nav>
+                
             </nav>
 
         </div>
-        </body></html>
+        </body>
     );
 };
 

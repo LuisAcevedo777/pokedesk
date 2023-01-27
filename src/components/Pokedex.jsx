@@ -61,12 +61,12 @@ const Pokedex = () => {
     console.log(pokemonsPaginated)
     return (
         <body className={on ? 'body' : 'bodyDark'}>
-        <div>
+        <div className='rects0'>
             
      
-            <header>
+            <header className='rects'>
                 <div className='header'>
-                    <img className='imgPokedex' src={pokedex} alt="" />
+                    <img className={on ?'imgPokedex' : 'imgPokedexDDark'} src={pokedex} alt="" />
                     <div  className= {on ? "rectangleCard" : "rectangleCardDark"}></div>
                     <div className='rectangleCard1'></div>
                     <div className='elipsesCard'>
@@ -75,14 +75,14 @@ const Pokedex = () => {
             </header>
 
             <div className='welInpuType'>
-                <div className='welwel'><h1 className={on ? "wel" : "welDark"}>Welcome! {userName},</h1><p className= {on ? "welcome" : "welcomeDark"}>  Here you can find you favorite pokemon!!</p></div>
+                <div className='welwel'><h1 className={on ? "wel" : "welDark"}>Welcome! <br/> <br />{userName},</h1><p className= {on ? "welcome" : "welcomeDark"}>  Here you can find you favorite pokemon!!</p></div>
                 <div className='inpuType'>
                     <div className='cardImported'> 
                         <input className={on ? "inputChange" : "inputChangeDark"} type="text" value={search} onChange={(e) => setSearch(e.target.value)} />
                         <button className={on ? "buttonChanged" : "buttonChangedDark"} onClick={catched}> <p className={on ? "buttoni" : "buttoniDark"}> Catch My Pokemon</p></button>
                     </div>
                     <Link to={'/config'}> <img title='setting' className='link' src={conf} alt="setting" /> </Link>
-                    <div className='type'> <h2>Choose your POKEMON type :</h2>
+                    <div className='type'> <h2 className={on ? 'choose' : "chooseDark"}>Choose your POKEMON type :</h2>
                         <select className={on ? "select-css" : "select-cssDark"} onChange={filter} name="" id="">
                             {type.map((tapey) => (
 
