@@ -120,19 +120,9 @@ console.log(uniquePoke)
                                 ))}
 
                             </div>
-
-
-
-
                         </nav>
-
-
-                    </article>
-                  
-                
-           
-
-        </div>
+                  </article>
+                    </div>
       
     );
 };
