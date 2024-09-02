@@ -14,7 +14,7 @@ function App() {
 
 
   return (
-    <div className="App">
+   
       
       <HashRouter>
 <Routes>
@@ -34,7 +34,7 @@ function App() {
 
 
 
-    </div>
+
   )
 }
 

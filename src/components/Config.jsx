@@ -30,16 +30,16 @@ const Config = () => {
 
 
     return (
-        <body className={on ? 'body' : "bodyDark"}>
-        <div className='seti'>
+        
+       
 
-<div className='set'>
+<div className={on ? 'set' : "setDark"}>
                 <div className='elipsesCardc'>
                 <div className='elipseCardc'> <button onClick={back2} className='buttonElipsec'><i class="fa-solid fa-circle-left fa-4x"style={ on ?{color:'red'} :{ color: '#66c0e6'}}></i></button></div>
                 </div>
                 
                <h2>On/Off</h2>
-               <button onClick={()=>dispatch(ono())} className='encender'><img className='bombon' src={on ? bombon :bombof} alt="" /></button>
+               <img className={on ? 'bombon' : 'bombof'} src={on ? bombon :bombof} alt="" onClick={()=>dispatch(ono())}/>
 
           <h1 className={on ? 'perPage' : 'perPageDark'}>Change Pokemon's Quantities per Page?</h1>
           <select className='selectConfig' onChange={ver} name="" id="">
@@ -54,7 +54,7 @@ const Config = () => {
                 </div>
                 
                 
-        </div></body>
+    
     );
 };
 

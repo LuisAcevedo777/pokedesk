@@ -60,22 +60,19 @@ const Pokedex = () => {
     console.log(pokemonList)
     console.log(pokemonsPaginated)
     return (
-        <body className={on ? 'body' : 'bodyDark'}>
-        <div className='rects0'>
-            
-     
-            <header className='rects'>
-                <div className='header'>
-                    <img className={on ?'imgPokedex' : 'imgPokedexDDark'} src={pokedex} alt="" />
-                    <div  className= {on ? "rectangleCard" : "rectangleCardDark"}></div>
-                    <div className='rectangleCard1'></div>
-                    <div className='elipsesCard'>
-                        <div className='elipseCard'><button onClick={back1} className='buttonElipse'><i className="fa-solid fa-circle-left fa-4x" style={on ? { color: 'red' }:{ color: '#66c0e6' }}></i></button></div>
-                    </div></div>
-            </header>
+        <div className={on ? 'principalDivPokedesk' : 'principalDivPokedeskDark'}>
+        
+            <nav className= {on ? "rectangleCard" : "rectangleCardDark"}>
+                
+                    <img className={on ?'imgPokedex' : 'imgPokedexDark'} src={pokedex} alt="" />
+                     <div className='rectangleCard1'>
+                        <div className='elipseCard' onClick={back1}>
+                            <i className="fa-solid fa-circle-left fa-2x" style={on ? { color: 'red' }:{ color: '#66c0e6' }}>
+                                </i></div></div>
+                          </nav>
 
             <div className='welInpuType'>
-                <div className='welwel'><h1 className={on ? "wel" : "welDark"}>Welcome! <br/> <br />{userName},</h1><p className= {on ? "welcome" : "welcomeDark"}>  Here you can find you favorite pokemon!!</p></div>
+                <div className='welwel'><h1 className={on ? "wel" : "welDark"}>Welcome! {'  ' + userName},</h1><p className= {on ? "welcome" : "welcomeDark"}>  Here you can find you favorite pokemon!!</p></div>
                 <div className='inpuType'>
                     <div className='cardImported'> 
                         <input className={on ? "inputChange" : "inputChangeDark"} type="text" value={search} onChange={(e) => setSearch(e.target.value)} />
@@ -96,8 +93,8 @@ const Pokedex = () => {
                 </div>
             </div>
 
-            <div className='dividedLine'></div>
-            <nav className='bodyCard'>
+           
+            <div className='bodyCard'>
                 {
                     pokemonsPaginated.map(pokemon => (
 
@@ -112,11 +109,11 @@ const Pokedex = () => {
 
                     ))
 
-                }</nav>
+                }</div>
 
 
 
-            <footer>
+           <div>
                 <div className="buttonContainer">
                     {pages.map(number => <button className={on ? "paginationButton" : "paginationButtonDark"} key={number} onClick={() => setPage(number)}> <h3 className={on ? "chercherNumber" : "chercherNumberDark"}> {number}</h3></button>)}
 
@@ -124,14 +121,23 @@ const Pokedex = () => {
                 <div className='buttons'> <button onClick={() => setPage(page - 1)} disabled={page === 1}><i class="fa-solid fa-chevron-left fa-4x"></i></button>
                     {page}/{totalPages}
                     <button onClick={() => setPage(page + 1)} disabled={page === totalPages}><i class="fa-solid fa-chevron-right fa-4x"></i></button>
-                </div>
+                </div></div>
 
 
+                <footer>
+                    <div className={on ? 'rectangle' : 'rectangleDark'}></div>
+                    <div className='rectangle1'></div>
+                    <div className='elipses'>
+                        <div className='elipse'><div className='elipse1'></div></div>
+                    </div>
+                </footer>
 
-            </footer>
+
 
            
-        </div> </body>
+
+           
+        </div> 
     );
 };
 

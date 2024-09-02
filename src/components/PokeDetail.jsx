@@ -30,25 +30,22 @@ console.log(uniquePoke)
     }
     return (
     
-    <body className={on ? 'body1' : "bodyDark1"}>
+    <div className= {on ? 'pullBody1' : 'pullBodyDark1' }>
         
-       
-        <div className= {on ? 'pullBody1' : 'pullBodyDark1' }>
-            <header className='headRec'>
-                <img className={on ? 'imgPokedexD' : 'imgPokedexDDark'} src={pokedex} alt="" />
-                <div className={on ? "rectangleCardD" : "rectangleCardDDark"}></div>
-                <div className='rectangleCard1D'></div>
-                <div className='elipsesCardD'>
-                    <div className='elipseCardD'> <button onClick={back} className='buttonElipse'><i class="fa-solid fa-circle-left fa-4x" style={ on ?  { color: 'red' } :{ color: '#66c0e6' }}></i></button></div>
-                </div>
-            </header>
+                  
+            <nav className= {on ? "rectangleCardD" : "rectangleCardDDark"}>
+                
+                    <img className={on ?'imgPokedexD' : 'imgPokedexDDark'} src={pokedex} alt="" />
+                     <div className='rectangleCard1D'>
+                        <div className='elipseCardD' onClick={back}>
+                            <i className="fa-solid fa-circle-left fa-2x" style={on ? { color: 'red' }:{ color: '#66c0e6' }}>
+                                </i></div></div>
+                          </nav>
             
 
-            <div className='dividedLine'></div>
 
-            <nav className=   {on ? "nav" : "navDark"}>
-                
-               
+            
+            
 
                     <article className={on ?"containerDetail" :"containerDetailDark"}>
                     <div className={on ? 'imgContainer' :'imgContainerDark' }><img className='imgHead' src={uniquePoke.sprites?.front_shiny} alt="" /></div>
@@ -64,7 +61,7 @@ console.log(uniquePoke)
 
                                 <div className='rl'>  <div className={on ? "tskill" : "tskillDark"} >Abilities </div> <div className='tsk12'>  <div className= {on ? "sk1" : "sk1Dark"}>{uniquePoke?.abilities?.[0]?.ability.name}</div> <div className='sk2'>{uniquePoke?.abilities?.[1]?.ability.name}</div>         </div></div></div>
                                 </article>
-                                <div className='dividedLine2'></div>
+                                
                             <article className={on ? "article" : "articleDark"}>
                                 <div className='lineOne' ><h1 className='statsName'>Stats</h1><div className='statLine'></div><img className='pokeIm' src={pn} alt="" /></div>
 
@@ -107,7 +104,7 @@ console.log(uniquePoke)
                             </article>
 
                     
-                    <div className='dividedLine2'></div>
+                    
                     
 
                     <article className={on ? "article2" : "article2Dark"}>
@@ -133,10 +130,10 @@ console.log(uniquePoke)
                     </article>
                   
                 
-            </nav>
+           
 
         </div>
-        </body>
+      
     );
 };
 

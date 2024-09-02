@@ -81,12 +81,10 @@ const PokemonCard = ({ url }) => {
 
 
     return (
-        <div>
-
 
             <div style={{ background: color }} className='principalCard'>
-                <div style={{ background: color }} className='card_containerP'>
-                    <div className="card_container" onClick={() => navigate(`/Pokedex/${pokemon.id}`)}>
+                <div style={{ background: color }} className='card_containerP' onClick={() => navigate(`/Pokedex/${pokemon.id}`)}>
+                   
                         <img className='pokeImage' src={pokemon.sprites?.front_default} alt="" />
                         <div className='pokehead'>
                             <h1 className='pokemonName'>{pokemon.name}</h1>
@@ -94,16 +92,16 @@ const PokemonCard = ({ url }) => {
                             <p className='typeName'>Type</p></div>
                     </div>
                     <div className='stats'>
-                        <div className='stat'> <span className='stat1'>{pokemon.stats?.[0].stat.name}</span><span className='stat22'>{pokemon.stats?.[0].base_stat}</span></div>
+                        <div className='stat'> <span className='stat1'>{pokemon.stats?.[0].stat.name}</span><span className='stat2'>{pokemon.stats?.[0].base_stat}</span></div>
                         <div className='stat'><span className='stat1'>{pokemon.stats?.[1].stat.name}</span><span className='stat2'>{pokemon.stats?.[1].base_stat}</span></div>
                         <div className='stat'><span className='stat1'>{pokemon.stats?.[2].stat.name}</span><span className='stat2'>{pokemon.stats?.[2].base_stat}</span></div>
                         <div className='stat'> <span className='stat1'>{pokemon.stats?.[3].stat.name}</span><span className='stat2'>{pokemon.stats?.[3].base_stat}</span></div>
                         <div className='stat'><span className='stat1'>{pokemon.stats?.[4].stat.name}</span><span className='stat2'>{pokemon.stats?.[4].base_stat}</span></div>
-                        <div className='stat'><span className='stat1'>{pokemon.stats?.[5].stat.name}</span><span className='stat2'>{pokemon.stats?.[5].base_stat}</span></div>
-                    </div>
+                        <div className='stat'><span className='stat1'>{pokemon.stats?.[5].stat.name} </span><span className='stat2'>{pokemon.stats?.[5].base_stat}</span></div>
+                    
                 </div>
 
-            </div></div>
+            </div>
     );
 };
 
