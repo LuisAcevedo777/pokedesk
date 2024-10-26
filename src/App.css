@@ -618,7 +618,7 @@ p.buttoni {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 2vw;
+  font-size: 14vw;
   line-height: 28px;
   display: flex;
   align-items: center;
@@ -1915,7 +1915,7 @@ img.pokedex {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 100%;
-  font-size: 20px;
+  font-size: 10px;
   line-height: 28px;
   display: flex;
   flex-direction: column;
@@ -2155,7 +2155,7 @@ footer {
 .chooseDark{color: white;}
 
 .welInpuType {
-
+  margin-bottom: 5rem;
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
@@ -2366,15 +2366,15 @@ p.buttoniDark {
 
 
 .bodyCard{
-
-
 margin-top: 15%;
 width: 100vw;
 height: auto;
-display: grid;
-  grid-template-columns: 1fr 1fr  ;
+display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 10%;
+  
 }
 
 /* POKEDEX -- showing pokemons list*/
@@ -2384,14 +2384,13 @@ display: grid;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 20px;
   line-height: 38px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-
   color: #212121;
+ 
 }
 .chercherNumberDark {
 
@@ -2430,17 +2429,6 @@ display: grid;
   box-shadow: 0.5rem 0.5rem 1rem 0;
 }
 
-.principalCard:hover  {
-
-  width: 78%;
-  height: 35vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border-radius: 20px;
-  margin-bottom: 70%;
-  box-shadow: 0.5rem 0.5rem 1rem 0;
-}
 
 
 .card_containerP {
@@ -2572,7 +2560,7 @@ display: grid;
 
 .paginationButton {
 
-  width: 5vw;
+  width: 8vw;
   height: 5vh;
   left: 275px;
   top: 2298px;
@@ -2989,7 +2977,7 @@ display: grid;
 
   font-family: 'Roboto';
   font-style: normal;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 35px;
   display: flex;
 
@@ -3022,7 +3010,7 @@ display: grid;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 15px;
   line-height: 29px;
   display: flex;
   flex-direction: row;
@@ -3068,7 +3056,7 @@ display: grid;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 12px;
   line-height: 29px;
   display: flex;
   flex-direction: row;
@@ -3250,6 +3238,10 @@ display: grid;
 
 .moveP {
   padding: 2rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 
 }

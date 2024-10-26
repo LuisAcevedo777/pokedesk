@@ -76,7 +76,7 @@ const Pokedex = () => {
                 <div className='inpuType'>
                     <div className='cardImported'> 
                         <input className={on ? "inputChange" : "inputChangeDark"} type="text" value={search} onChange={(e) => setSearch(e.target.value)} />
-                        <button className={on ? "buttonChanged" : "buttonChangedDark"} onClick={catched}> <p className={on ? "buttoni" : "buttoniDark"}> Catch My Pokemon</p></button>
+                        <button className={on ? "buttonChanged" : "buttonChangedDark"} onClick={catched}> <h3 className={on ? "buttoni" : "buttoniDark"}> Catch My Pokemon</h3></button>
                     </div>
                     <Link to={'/config'}> <img title='setting' className='link' src={conf} alt="setting" /> </Link>
                     <div className='type'> <h2 className={on ? 'choose' : "chooseDark"}>Choose your POKEMON type :</h2>
