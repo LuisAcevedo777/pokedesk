@@ -1714,7 +1714,7 @@ display: grid;
 }
 /*--------------------------------------------------------------------------------
 /////////////////////////////////////////////////////////////////////////////////*/
-@media only screen and (min-width:550px) and (max-width:859px) {
+@media only screen and (min-width:350px) and (max-width:859px) {
 
 /*Home*/
 .body {
