@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-@media only screen and (min-width: 860px) {
+@media only screen and (min-width: 801px) {
 /*Home*/
 
 .body {
@@ -1714,7 +1714,7 @@ display: grid;
 }
 /*--------------------------------------------------------------------------------
 /////////////////////////////////////////////////////////////////////////////////*/
-@media only screen and (min-width:350px) and (max-width:859px) {
+@media only screen and (min-width:330px) and (max-width:859px) {
 
 /*Home*/
 .body {
@@ -2016,7 +2016,7 @@ footer {
   height: 12vw;
   border-radius: 50%;
   background: #FFFFFF;
-  border: 12px solid #000000;
+  border: 2px solid #000000;
 }
 
 .elipse1 {
@@ -2677,8 +2677,8 @@ display: flex;
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  background: #FFFFFF;
-  border: 12px solid #000000;
+  background: white;
+  border: 2px solid #000000;
   margin-right: 3rem;
 }
 
